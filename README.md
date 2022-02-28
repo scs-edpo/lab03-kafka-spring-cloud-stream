@@ -7,7 +7,7 @@ in combination to prepare for the upcoming lecture contents, especially for the 
 
 If you are interested in the plain combination of Kafka and Spring you find example tutorials [here](https://medium.com/@aliarslan10/apache-kafka-configuration-in-spring-boot-with-producer-and-consumer-example-621adf2fd78b) and [here](https://github.com/aliarslan10/spring-for-kafka).
 
-The project has a [Producer](/src/main/java/com/example/KafkaProducer.java) that shows how to produce messages at a regular pace (every second) in a scheduled manner via a [StreamBridge](https://www.docs4dev.com/javadoc/en/org/springframework/cloud/spring-cloud-stream/3.0.8.RELEASE/org/springframework/cloud/stream/function/StreamBridge.html) 
+The project has a [Producer](/src/main/java/com/example/KafkaProducer.java) that shows how to produce messages at a regular pace in a scheduled manner via a [StreamBridge](https://www.docs4dev.com/javadoc/en/org/springframework/cloud/spring-cloud-stream/3.0.8.RELEASE/org/springframework/cloud/stream/function/StreamBridge.html) 
 and additionally via a [REST Controller](/src/main/java/com/example/KafkaRestController.java).
 Moreover, there are two consumers that listen to the different topics. 
 
