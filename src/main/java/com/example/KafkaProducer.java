@@ -14,14 +14,14 @@ public class KafkaProducer {
     @Autowired
     private StreamBridge streamBridge;
 
-    @Scheduled(cron = "*/500 * * * * *")
+    @Scheduled(cron = "*/30 * * * * *")
     public void sendMessage(){
         for  (int i = 0; i < 1000; i++) {
             streamBridge.send("producer-out-0",new Message("bridgeEvent","message from stream bridge"));
         }
     }
 
-    @Scheduled(cron = "*/1000 * * * * *")
+    @Scheduled(cron = "*/45 * * * * *")
     public void sendGlobalMessage(){
         String event = global_events[(int) (Math.random() * global_events.length)] + "_" + System.nanoTime();
         streamBridge.send("producer-out-1",new Message("globalEvent",event));
