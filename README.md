@@ -3,13 +3,14 @@
 This lab is based on tutorials from [here](https://tanzu.vmware.com/developer/guides/spring-cloud-stream-kafka-p1/) and [here](https://github.com/amrutprabhu/kafka-workouts/tree/master/spring-cloud-stream-kafka-communication/src/main/java/com/amrut/prabhu).
 
 The example project in this lab shows how to use Kafka together with the [Spring Cloud Stream](https://spring.io/projects/spring-cloud-stream) Framework. We focus on using these technologies
-in combination to prepare for the upcoming lecture contents, especially for the [flowing-retail](https://github.com/berndruecker/flowing-retail) project.
+in combination to prepare for the upcoming lecture contents, especially for the [flowing retail](https://github.com/berndruecker/flowing-retail) project.
 
 If you are interested in the plain combination of Kafka and Spring you find example tutorials [here](https://medium.com/@aliarslan10/apache-kafka-configuration-in-spring-boot-with-producer-and-consumer-example-621adf2fd78b) and [here](https://github.com/aliarslan10/spring-for-kafka).
 
-The project has a [Producer](/src/main/java/com/example/KafkaProducer.java) that shows how to produce messages at a regular pace in a scheduled manner (as specified in the CRON expression) via a [StreamBridge](https://www.docs4dev.com/javadoc/en/org/springframework/cloud/spring-cloud-stream/3.0.8.RELEASE/org/springframework/cloud/stream/function/StreamBridge.html) 
-and additionally via a [REST Controller](/src/main/java/com/example/KafkaRestController.java).
-Moreover, there are two consumers that listen to the different topics and a producer (sending a message once per second) implemented via Java functional programming in the main [Application](/src/main/java/com/example/SpringCloudStreamKafkaApplication.java) class. 
+The project has a [Producer](/src/main/java/com/example/KafkaProducer.java) that shows how to produce messages at a regular pace in a scheduled manner (as specified in the CRON expression) and additionally via a [REST Controller](/src/main/java/com/example/KafkaRestController.java) using a [StreamBridge](https://www.tutorialspoint.com/spring_cloud/spring_cloud_streams_with_apache_kafka.htm).
+
+Moreover, there are two consumers that listen to the different topics and a producer/supplier (sending a message once per second) implemented via Java functional programming in the main [Application](/src/main/java/com/example/SpringCloudStreamKafkaApplication.java) class. 
+You can find additional material on using Spring Cloud Stream via the functional programming model with Suppliers and Consumers [here](https://piotrminkowski.com/2021/11/11/kafka-streams-with-spring-cloud-stream/) and [here](https://refactorfirst.com/spring-cloud-stream-with-kafka-communication.html).
 
 The messages follow the [Cloud Events](https://cloudevents.io/) specification.
 
